@@ -34,7 +34,6 @@ const Sidebar = () => {
     if (typeof window !== 'undefined') {
         var requiredUser: any = JSON.parse(localStorage.getItem("currentUser") as string)
     }
-    console.log(requiredUser);
 
     const handleOptionChange = (event: any) => {
         setSelectedOption(event.target.value);
@@ -76,7 +75,6 @@ const Sidebar = () => {
     useEffect(() => {
         applyFilters()
     }, [searchValue, checkboxes, selectedOption]);
-    console.log(filter, "fil");
 
     return (
         <ProtectedRoute>

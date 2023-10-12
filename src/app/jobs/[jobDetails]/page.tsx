@@ -13,7 +13,6 @@ const EachJobDetails = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     const { jobDetails } = useParams()
-    console.log(jobDetails);
     const fetchData = async () => {
         try {
             const response = await axios.get(`https://apis.ccbp.in/jobs/${jobDetails}`, {
@@ -29,7 +28,6 @@ const EachJobDetails = () => {
 
         }
     }
-    console.log(apiData);
     const override: CSSProperties = {
         display: "block",
         margin: "0 auto",
